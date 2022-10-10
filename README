@@ -1,0 +1,11 @@
+A list of files to build basic containers that will run a kubernetes cluster inside.
+
+The end product is a single docker container that runs a kubernetes cluter with one node.
+We build the end system with alpine linux image, and the light weight distribution of
+alpine linux.
+
+You MUST launch the container with "--privileged" flag so that the container can
+mount overlayfs inside.
+
+An installation of helm is included so that you can manage k8s packages with ease.
+Use "k3s kubectl" instead of "kubectl" to access the k3s cluster, please.
