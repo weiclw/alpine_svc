@@ -1,6 +1,6 @@
 from alpine:latest
 
-RUN apk add --no-cache curl openrc &&\
+RUN apk add --no-cache curl openrc git openssh vim &&\
 # Tell openrc its running inside a container, till now that has meant LXC
     sed -i 's/#rc_sys=""/rc_sys="lxc"/g' /etc/rc.conf &&\
 # Tell openrc loopback and net are already there, since docker handles the networking

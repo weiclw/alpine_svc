@@ -9,3 +9,6 @@ RUN curl -sfL https://get.k3s.io | sh - || true &&\
 # So that the containerd can mount an overlayfs inside;
 # Note: This means that the container shall be started with --privileged flag.
 VOLUME [ "/var/lib/rancher" ]
+
+# For tools such as helm to connect to k3s.
+ENV KUBECONFIG=/etc/rancher/k3s/k3s.yaml
